@@ -1,0 +1,17 @@
+[package]
+name = "quoted"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[[bin]]
+name = "qtd"
+path = "src/main.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dirs = "5.0.1"
+rand = "0.8.5"
+serde = "1.0.196"
+serde_json = "1.0.113"
