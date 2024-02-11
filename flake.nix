@@ -139,6 +139,10 @@
         drv = quoted;
       };
 
+      overlays.default = final: prev: {
+        inherit (self.packages.${final.system}) default;
+      };
+
       devShells.default = craneLib.devShell {
         # Inherit inputs from checks.
         checks = self.checks.${system};
