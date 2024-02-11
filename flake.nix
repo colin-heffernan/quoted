@@ -140,7 +140,7 @@
       };
 
       overlays.default = final: prev: {
-        quoted = self.packages.${final.system}.default;
+        inherit quoted;
       };
 
       devShells.default = craneLib.devShell {
