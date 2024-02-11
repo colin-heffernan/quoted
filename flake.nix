@@ -139,10 +139,6 @@
         drv = quoted;
       };
 
-      overlays.quoted = final: prev: {
-        inherit quoted;
-      };
-
       devShells.default = craneLib.devShell {
         # Inherit inputs from checks.
         checks = self.checks.${system};
@@ -157,5 +153,10 @@
           pkgs.rustfmt
         ];
       };
-    });
+    })
+    // {
+      overlays.quoted = final: prev: {
+        quoted = self.packages.${final.system}.default;
+      };
+    };
 }
