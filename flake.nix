@@ -155,7 +155,7 @@
       };
     })
     // {
-      overlays.quoted = final: prev: {
+      overlays.default = final: prev: {
         quoted = self.packages.${final.system}.default;
       };
     };
