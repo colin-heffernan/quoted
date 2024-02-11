@@ -140,7 +140,7 @@
       };
 
       overlays.default = final: prev: {
-        inherit (self.packages.${final.system}) default;
+        inherit (self.packages) default;
       };
 
       devShells.default = craneLib.devShell {
