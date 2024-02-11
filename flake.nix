@@ -139,7 +139,7 @@
         drv = quoted;
       };
 
-      overlays.default = final: prev: {
+      overlays.quoted = final: prev: {
         inherit quoted;
       };
 
