@@ -16,7 +16,7 @@ fn main() {
         read_to_string(config).expect("Quoted's config file does not exist or is not accessible.");
     let quotes: Vec<(String, String)> = serde_json::from_str(&table_raw).unwrap();
     let rng = rand::random::<usize>();
-    let (quote, author) = &quotes[rng & quotes.len()];
+    let (quote, author) = &quotes[rng % quotes.len()];
     let mut quote_lines: Vec<String> = Vec::new();
     let mut quote_line = String::from("|");
     for quote_word in quote.split(' ') {
